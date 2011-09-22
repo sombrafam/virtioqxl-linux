@@ -2422,4 +2422,10 @@ if FB || SGI_NEWPORT_CONSOLE
 	source "drivers/video/logo/Kconfig"
 endif
 
+config VIRTIO_QXL
+	tristate "QXL driver over VirtIO"
+	depends on EXPERIMENTAL && VIRTIO
+	help
+	  This driver provides a QXL video device using virtio transport.
+
 endmenu
